@@ -26,7 +26,7 @@ public class UF {
     public int find(int p){
         return id[p];
     }
-    public void uniion(int p,int q){
+    public void union(int p,int q){
         int pID=find(p);
         int qID=find(q);
         if(pID==qID) return;
@@ -42,7 +42,7 @@ public class UF {
             int p=StdIn.readInt();
             int q=StdIn.readInt();//读取整数对
             if(uf.connected(p,q)) continue;//如果已经连通则忽略
-            uf.uniion(p,q);//归并分量
+            uf.union(p,q);//归并分量
             StdOut.println(p+" "+q);//打印连接
         }
         StdOut.println(uf.count()+"components");
